@@ -1,8 +1,8 @@
-:root {
+:root { 
     --bg: #2c2b2c;
-    --border: 1px solid #d31900 ;
+    --border: 1px solid #f02005 ;
     --color: #fcfef5 ;
-    --back-hover: #f51441;
+    --back-hover: #d31900;
     --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -18,7 +18,7 @@
 
 body {
     background-color: var(--bg);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Poppins",sans-serif;
 }
 
 .header {
@@ -34,21 +34,40 @@ body {
     z-index: 99;
     background-color: var(--bg);
 }
-
-.logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--color);
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-
+.logo {
+   background: url("https://p.turbosquid.com/ts-thumb/ok/KCyGOe/Oi5LHTG6/dodgechallengersrtdemoncarbon2019_01/jpeg/1567277806/1920x1080/fit_q87/4c43f08f26f8727a4fac8ca44bba1ed2059be58c/dodgechallengersrtdemoncarbon2019_01.jpg");
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   background-size: cover;
+   background-position: center;
+   object-fit: cover;
+   height: 58px;
+   width: 58px;
+   border-radius: 50%;
+}
+.name-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: rgb(249, 34, 34)
+    
+}
 .nevegacao {
     display: flex;
     gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
 }
 
 .nevegacao a {
     color: var(--color);
-    
 }
 
 .btn {
@@ -57,9 +76,11 @@ body {
     padding: 0.5rem 1rem ;
     border-radius: 10px;
     background-color: #f10d3a;
+    transition: transform 0.3s ease;
 }
 .btn:hover {
-    background-color: #d31900;
+    background-color: var(--back-hover);
+    transform: translateY(-2px); 
 }
 
 
@@ -73,7 +94,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-     flex-direction: column;
+    flex-direction: column;
 }
 
 .menu-text h1 {
@@ -98,4 +119,115 @@ body {
     margin: 10px 1rem ;
     border-radius: 10px;
     background-color: #f51441;
+    transition: transform 0.3s ease;
 }
+.btn-link a:hover {
+    background-color: var(--back-hover);
+    transform: translateY(-3px); 
+}
+
+.carros h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--color);
+}
+.carros span {
+    color: #d31900;
+}
+
+.carros p  {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #cecece;
+    font-weight: lighter;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 15px auto;
+}
+.img-container {
+    position: relative;
+}
+.grid-cards li {
+    position: relative;
+    border: var(--border);
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.grid-cards li img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: calc(80%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 80%;
+    background-color: #f10d3a;
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    color: var(--color);
+}
+.info h3 {
+    margin-bottom: 8px;
+    color: var(--color);
+    font-size: 1.5rem;
+}
+.info-text{
+    font-size: 16px;
+    color: #cecece;
+    margin-bottom: 8px;
+}
+.space-desc {
+    display: flex;
+    justify-content: space-between;
+}
+.desc p {
+    font-size: 14px;
+    font-weight: 200;
+    margin: 3px 0;
+    color: #cecece;
+}
+.btn-explorar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f51441;
+   margin: 20px 30px ;
+   text-align: center;
+   padding: 0.8rem;
+   border-radius: 20px;
+   color: var(--color);
+   font-size: 1.1rem;
+   font-weight: 700;
+}
+.btn-explorar:hover {
+    background-color: var(--back-hover);
+}
+
+.grid-cards li img:hover {
+    transform: scale(1.1); 
+}
+
