@@ -219,6 +219,10 @@ body {
     font-size: 12px;
     font-weight: 300;
     color: #fff;
+    cursor: pointer;
+}
+.badge:hover {
+    background-color: #d31900;
 }
 
 .info {
