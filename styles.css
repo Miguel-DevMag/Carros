@@ -551,7 +551,6 @@ button:hover {
 
 @media screen and (max-width: 900px) {
 
-
     .header {
         position: relative;
         flex-direction: column;
@@ -570,9 +569,8 @@ button:hover {
         display: none;
     }
 
-
     .menu-text h1 {
-        font-size: 2.6rem;
+        font-size: 3rem;
         padding: 0 10px;
     }
 
@@ -586,7 +584,13 @@ button:hover {
         margin: 10px 5px;
         font-size: 0.95rem;
     }
-
+    .carros h2 {
+        font-size: 2.0rem;
+        margin-top: 25px;
+    }
+    .info-text {
+        font-size: 12px; 
+    }
 
     .grid-cards {
         grid-template-columns: 1fr;
@@ -601,7 +605,6 @@ button:hover {
         font-size: 1.3rem;
     }
 
-
     .marcas h2 {
         font-size: 2.2rem;
     }
@@ -610,8 +613,9 @@ button:hover {
         grid-template-columns: 1fr;
         padding: 0 15px;
     }
-
-
+    .cards h3 {
+        font-size: 1.7rem;
+    }
     .sobre-caixa {
         flex-direction: column;
         width: 95%;
