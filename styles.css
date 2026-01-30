@@ -44,7 +44,7 @@ body {
 }
 
 .logo {
-    background: url("https://www.pngarts.com/files/2/Dodge-Challenger-Transparent-Background-PNG.png");
+    background: url("img/Dodge-Challenger.png");
     display: flex;
     justify-content: center;
     align-items: center;
