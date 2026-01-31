@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <header class="header">
+
+    <header class="header header-mobile">
         <div class="nav-logo">
             <div class="logo"></div>
             <h2 class="name-logo">SRT ELITE</h2>
         </div>
         <nav class="navegacao">
-            
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#carros">Carros</a></li>
@@ -24,7 +24,31 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <a class="btn" href="#">Comprar</a>
+
+
+        <div class="menu-mobile">
+            <button class="hamburguer" id="hamburguer">☰</button>
+        </div>
+        <a class="btn mobile-btn" href="#">Comprar</a>
+
+        <nav class="navegacao-mobile" id="menuMobile">
+            <div class="menu-container">
+                <div class="menu-header">
+                    <div class="menu-logo">
+                        <div class="logo"></div>
+                        <span>SRT ELITE</span>
+                    </div>
+                    <button class="close-menu" id="closeMenu">✕</button>
+                </div>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#carros">Carros</a></li>
+                    <li><a href="#marcas">Marcas</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+        </nav>
+
     </header>
     <section id="inicio">
         <div class="imagem-carros">
@@ -327,5 +351,7 @@
         </form>
     </section>
 </body>
+
+<script src="script.js"></script>
 
 </html>
