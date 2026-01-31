@@ -279,6 +279,19 @@ body {
     background-color: var(--back-hover);
 }
 
+.menu-mobile {
+    display: none;
+}
+
+.navegacao-mobile {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+}
+
 .grid-cards li img:hover {
     transform: scale(1.1);
 }
@@ -552,9 +565,18 @@ button:hover {
 @media screen and (max-width: 900px) {
 
     .header {
-        position: relative;
-        flex-direction: column;
-        gap: 15px;
+        background: transparent;
+        border: none;
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        right: 200px;
+        left: revert;
+    }
+
+    .nav-logo,
+    .logo,
+    .name-logo {
         display: none;
     }
 
@@ -567,6 +589,112 @@ button:hover {
     .btn {
         margin-bottom: 10px;
         display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hamburguer {
+        font-size: 2rem;
+        background: none;
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .mobile-btn {
+        display: block;
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+        margin-top: 15px;
+
+    }
+
+    .navegacao-mobile {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(3px);
+        display: none;
+        z-index: 999;
+    }
+
+    .navegacao-mobile.active {
+        display: block;
+    }
+
+    .menu-container {
+        width: 80%;
+        max-width: 340px;
+        height: 100vh;
+        background-color: var(--bg);
+        box-shadow: var(--box-shadow);
+        transform: translateX(-100%);
+        transition: transform 0.35s ease;
+    }
+
+    .navegacao-mobile.active .menu-container {
+        transform: translateX(0);
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: var(--border);
+    }
+
+    .menu-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-logo span {
+        color: var(--color);
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+
+    .close-menu {
+        background: none;
+        color: var(--color);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    .navegacao-mobile ul {
+        display: flex;
+        flex-direction: column;
+       padding: 20px 0px 20px 0px;
+        gap: 25px;
+    }
+
+    .navegacao-mobile ul {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navegacao-mobile.active ul {
+        transform: translateX(0);
+    }
+    .navegacao-mobile li {
+        width: 100%;
+        border-bottom: 1px solid rgb(252, 62, 62);
+        padding: 10px 0px 10px 0px;
+    }
+    .navegacao-mobile li a {
+        color: var(--color);
+        font-size: 1.2rem;
+        padding: 10px;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+
+    .navegacao-mobile li a:hover {
+        background-color: var(--back-hover);
     }
 
     .menu-text h1 {
@@ -584,12 +712,14 @@ button:hover {
         margin: 10px 5px;
         font-size: 0.95rem;
     }
+
     .carros h2 {
         font-size: 2.0rem;
         margin-top: 25px;
     }
+
     .info-text {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .grid-cards {
@@ -613,9 +743,11 @@ button:hover {
         grid-template-columns: 1fr;
         padding: 0 15px;
     }
+
     .cards h3 {
         font-size: 1.7rem;
     }
+
     .sobre-caixa {
         flex-direction: column;
         width: 95%;
