@@ -560,21 +560,15 @@ textarea {
     border-radius: 10px;
 }
 
-button:hover {
+.btn-enviar:hover {
     background-color: var(--back-hover);
-
 }
-
 @media screen and (max-width: 900px) {
 
     .header {
         background: transparent;
         border: none;
-        display: flex;
-        gap: 10px;
         position: absolute;
-        right: 200px;
-        left: revert;
     }
 
     .nav-logo,
@@ -612,7 +606,7 @@ button:hover {
         padding: 0.4rem 1rem;
         font-size: 0.9rem;
         margin-top: 15px;
-
+        position: absolute;
     }
 
     .navegacao-mobile {
@@ -690,7 +684,7 @@ button:hover {
     }
     .navegacao-mobile li a {
         color: var(--color);
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         padding: 10px;
         border-radius: 8px;
         transition: background 0.3s;
@@ -707,7 +701,7 @@ button:hover {
 
     .menu-text p {
         font-size: 1rem;
-        padding: 0 15px;
+        width: 90%;
         text-align: center;
     }
 
